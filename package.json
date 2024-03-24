@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
+    "test:coverage": "vitest --coverage",
     "dev": "tsx watch src/server.ts",
     "build": "tsup src --out-dir dist",
     "start": "node dist/server.js"
@@ -16,6 +17,7 @@
     "@rocketseat/eslint-config": "2.2.2",
     "@types/bcryptjs": "2.4.6",
     "@types/node": "^20.11.30",
+    "@vitest/coverage-v8": "1.4.0",
     "eslint": "8.57.0",
     "prisma": "5.11.0",
     "tsup": "^8.0.2",
