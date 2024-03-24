@@ -4,8 +4,7 @@
   "description": "Gympass app like",
   "main": "index.js",
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest run --watch",
+    "test": "vitest",
     "dev": "tsx watch src/server.ts",
     "build": "tsup src --out-dir dist",
     "start": "node dist/server.js"
