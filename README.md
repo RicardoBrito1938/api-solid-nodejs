@@ -18,7 +18,7 @@ Gympass app like
 
 ## Business rules
 
-- [ ] User can't check-in in two classes at the same time
+- [x] User can't check-in in two classes at the same time
 - [ ] User can't check-in in a class that already started
 - [ ] User can't check-in in a class that already finished
 - [ ] User should be able to check-in only nearby 100m
@@ -30,7 +30,7 @@ Gympass app like
 ## Non-functional requirements
 
 - [ ] The system should be able to handle 1000 users
-- [ ] Passoword should be encrypted
+- [x] Password should be encrypted
 - [ ] Persist data in PostgresSQL
 - [ ] All the lists should be paginated with 20 items per page
 - [ ] User should use JWT to authenticate
