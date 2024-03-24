@@ -4,7 +4,8 @@
   "description": "Gympass app like",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
+    "test:watch": "vitest run --watch",
     "dev": "tsx watch src/server.ts",
     "build": "tsup src --out-dir dist",
     "start": "node dist/server.js"
@@ -20,13 +21,15 @@
     "prisma": "5.11.0",
     "tsup": "^8.0.2",
     "tsx": "^4.7.1",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.2",
+    "vite-tsconfig-paths": "4.3.2"
   },
   "dependencies": {
     "@prisma/client": "5.11.0",
     "bcryptjs": "2.4.3",
     "dotenv": "16.4.5",
     "fastify": "^4.26.2",
+    "vitest": "1.4.0",
     "zod": "3.22.4"
   }
 }
