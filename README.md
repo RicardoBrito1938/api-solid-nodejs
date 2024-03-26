@@ -4,8 +4,8 @@ Gympass app like
 
 ## Funcional requirements
 
-- [ ] User can register
-- [ ] Should be able to authenticate
+- [x] User can register
+- [x] Should be able to authenticate
 - [ ] Should be able to logged profile
 - [ ] Should be able to see the list of gyms
 - [ ] Should be able to see the list of classes
@@ -21,7 +21,7 @@ Gympass app like
 - [x] User can't check-in in two classes at the same time
 - [ ] User can't check-in in a class that already started
 - [ ] User can't check-in in a class that already finished
-- [ ] User should be able to check-in only nearby 100m
+- [x] User should be able to check-in only nearby 100m
 - [ ] User can't check-in in a class that already full
 - [ ] User can only be validated by the gym admins
 - [ ] Gym can only be signed up by admins
