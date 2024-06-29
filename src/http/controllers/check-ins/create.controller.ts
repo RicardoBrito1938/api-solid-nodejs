@@ -19,8 +19,8 @@ export const create = async (request: FastifyRequest, reply: FastifyReply) => {
 
   await checkInUseCase.execute({
     gymId,
-    userLatitude: latitude,
-    userLongitude: longitude,
+    latitude: latitude,
+    longitude: longitude,
     userId: request.user.sub,
   })
 

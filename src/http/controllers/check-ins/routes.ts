@@ -5,7 +5,7 @@ import { validate } from './validate.controller'
 import { metrics } from './metrics.controller'
 import { history } from './history.controller'
 
-export const gymsROutes = async (app: FastifyInstance) => {
+export const checkInRoutes = async (app: FastifyInstance) => {
   app.addHook('onRequest', verifyJWT)
 
   app.get('/check-ins/metrics', metrics)

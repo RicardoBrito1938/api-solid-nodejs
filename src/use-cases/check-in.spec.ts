@@ -37,8 +37,8 @@ describe('Get User Profile Use Case', () => {
     const { checkIn } = await sut.execute({
       gymId: 'gym-id',
       userId: 'user-id',
-      userLatitude: 54.165234,
-      userLongitude: -4.4795936,
+      latitude: 54.165234,
+      longitude: -4.4795936,
     })
 
     expect(checkIn.id).toEqual(expect.any(String))
@@ -50,16 +50,16 @@ describe('Get User Profile Use Case', () => {
     await sut.execute({
       gymId: 'gym-id',
       userId: 'user-id',
-      userLatitude: 54.165234,
-      userLongitude: -4.4795936,
+      latitude: 54.165234,
+      longitude: -4.4795936,
     })
 
     await expect(() =>
       sut.execute({
         gymId: 'gym-id',
         userId: 'user-id',
-        userLatitude: 54.165234,
-        userLongitude: -4.4795936,
+        latitude: 54.165234,
+        longitude: -4.4795936,
       }),
     ).rejects.toBeInstanceOf(MaxNumberOfCheckIn)
   })
@@ -70,8 +70,8 @@ describe('Get User Profile Use Case', () => {
     await sut.execute({
       gymId: 'gym-id',
       userId: 'user-id',
-      userLatitude: 54.165234,
-      userLongitude: -4.4795936,
+      latitude: 54.165234,
+      longitude: -4.4795936,
     })
 
     vi.setSystemTime(new Date('2021-02-01T10:00:00'))
@@ -79,8 +79,8 @@ describe('Get User Profile Use Case', () => {
     const { checkIn } = await sut.execute({
       gymId: 'gym-id',
       userId: 'user-id',
-      userLatitude: 54.165234,
-      userLongitude: -4.4795936,
+      latitude: 54.165234,
+      longitude: -4.4795936,
     })
 
     expect(checkIn.id).toEqual(expect.any(String))
@@ -100,8 +100,8 @@ describe('Get User Profile Use Case', () => {
       sut.execute({
         gymId: 'gym-02',
         userId: 'user-id',
-        userLatitude: 0,
-        userLongitude: 0,
+        latitude: 0,
+        longitude: 0,
       }),
     ).rejects.toBeInstanceOf(MaxDistanceError)
   })

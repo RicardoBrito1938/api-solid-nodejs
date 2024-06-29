@@ -4,7 +4,7 @@ import { nearby } from './nearby.controller'
 import { search } from './search.controller'
 import { create } from './create.controller'
 
-export const gymsROutes = async (app: FastifyInstance) => {
+export const gymsRoutes = async (app: FastifyInstance) => {
   app.addHook('onRequest', verifyJWT)
 
   app.get('/gyms/nearby', nearby)

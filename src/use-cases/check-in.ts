@@ -9,8 +9,8 @@ import { MaxNumberOfCheckIn } from './errors/max-number-of-check-in'
 interface CheckInUseCaseRequest {
   userId: string
   gymId: string
-  userLatitude: number
-  userLongitude: number
+  latitude: number
+  longitude: number
 }
 
 interface CheckInUseCaseResponse {
@@ -26,8 +26,8 @@ export class CheckInUseCase {
   async execute({
     userId,
     gymId,
-    userLatitude,
-    userLongitude,
+    latitude,
+    longitude,
   }: CheckInUseCaseRequest): Promise<CheckInUseCaseResponse> {
     const gym = await this.gymsRepository.findById(gymId)
 
@@ -40,7 +40,7 @@ export class CheckInUseCase {
         latitude: gym.latitude.toNumber(),
         longitude: gym.longitude.toNumber(),
       },
-      { latitude: userLatitude, longitude: userLongitude },
+      { latitude: latitude, longitude: longitude },
     )
 
     const MAX_DISTANCE_IN_KILOMETERS = 0.1
